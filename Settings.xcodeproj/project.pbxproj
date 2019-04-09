@@ -8,20 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		FBB26087225D465E007F2C40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB26086225D465E007F2C40 /* AppDelegate.swift */; };
-		FBB26089225D465E007F2C40 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB26088225D465E007F2C40 /* ViewController.swift */; };
 		FBB2608C225D465E007F2C40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBB2608A225D465E007F2C40 /* Main.storyboard */; };
 		FBB2608E225D465E007F2C40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBB2608D225D465E007F2C40 /* Assets.xcassets */; };
 		FBB26091225D465E007F2C40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBB2608F225D465E007F2C40 /* LaunchScreen.storyboard */; };
+		FBB2609E225D4BF9007F2C40 /* SettingListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB2609D225D4BF9007F2C40 /* SettingListTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FBB26083225D465E007F2C40 /* Settings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Settings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBB26086225D465E007F2C40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FBB26088225D465E007F2C40 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FBB2608B225D465E007F2C40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FBB2608D225D465E007F2C40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FBB26090225D465E007F2C40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FBB26092225D465E007F2C40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FBB2609D225D4BF9007F2C40 /* SettingListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingListTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +54,38 @@
 		FBB26085225D465E007F2C40 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				FBB2609C225D4B38007F2C40 /* ViewControllers */,
+				FBB26098225D4A5C007F2C40 /* Resources */,
+				FBB26099225D4A6C007F2C40 /* Storyboards */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		FBB26098225D4A5C007F2C40 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				FBB26086225D465E007F2C40 /* AppDelegate.swift */,
-				FBB26088225D465E007F2C40 /* ViewController.swift */,
-				FBB2608A225D465E007F2C40 /* Main.storyboard */,
 				FBB2608D225D465E007F2C40 /* Assets.xcassets */,
 				FBB2608F225D465E007F2C40 /* LaunchScreen.storyboard */,
 				FBB26092225D465E007F2C40 /* Info.plist */,
 			);
-			path = Settings;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FBB26099225D4A6C007F2C40 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FBB2608A225D465E007F2C40 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		FBB2609C225D4B38007F2C40 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FBB2609D225D4BF9007F2C40 /* SettingListTableViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FBB26089225D465E007F2C40 /* ViewController.swift in Sources */,
+				FBB2609E225D4BF9007F2C40 /* SettingListTableViewController.swift in Sources */,
 				FBB26087225D465E007F2C40 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,7 +308,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4J7B9732LY;
-				INFOPLIST_FILE = Settings/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Settings/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +326,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4J7B9732LY;
-				INFOPLIST_FILE = Settings/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Settings/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
