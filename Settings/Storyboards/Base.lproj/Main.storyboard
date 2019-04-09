@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="settingCell" rowHeight="116" id="dCe-Qy-o5t">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="settingCell" rowHeight="116" id="dCe-Qy-o5t" customClass="SettingsTableViewCell" customModule="Settings" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="116"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dCe-Qy-o5t" id="WQD-Kn-9th">
@@ -42,6 +42,9 @@
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uwb-Gn-S1f">
                                                     <rect key="frame" x="221.5" y="0.0" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="settingSwitchToggled:" destination="dCe-Qy-o5t" eventType="valueChanged" id="UOG-2g-UYp"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                         </stackView>
@@ -55,7 +58,11 @@
                                         <constraint firstAttribute="trailingMargin" secondItem="pCm-9p-SLU" secondAttribute="trailing" constant="8" id="zFN-6z-geh"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.37084305290000003" green="0.71526485679999996" blue="0.6039108634" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <outlet property="settingIconImageView" destination="CwU-5R-fnq" id="wyY-da-fzt"/>
+                                    <outlet property="settingNameLabel" destination="N1z-i3-67E" id="PWF-7M-vWc"/>
+                                    <outlet property="settingSwitch" destination="Uwb-Gn-S1f" id="GIT-Ph-oKv"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

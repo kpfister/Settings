@@ -12,6 +12,7 @@
 		FBB2608E225D465E007F2C40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBB2608D225D465E007F2C40 /* Assets.xcassets */; };
 		FBB26091225D465E007F2C40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBB2608F225D465E007F2C40 /* LaunchScreen.storyboard */; };
 		FBB2609E225D4BF9007F2C40 /* SettingListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB2609D225D4BF9007F2C40 /* SettingListTableViewController.swift */; };
+		FBB260A0225D4CE5007F2C40 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB2609F225D4CE5007F2C40 /* SettingsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		FBB26090225D465E007F2C40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FBB26092225D465E007F2C40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FBB2609D225D4BF9007F2C40 /* SettingListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingListTableViewController.swift; sourceTree = "<group>"; };
+		FBB2609F225D4CE5007F2C40 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		FBB26085225D465E007F2C40 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				FBB260A1225D4CF1007F2C40 /* Custom Views */,
 				FBB2609C225D4B38007F2C40 /* ViewControllers */,
 				FBB26098225D4A5C007F2C40 /* Resources */,
 				FBB26099225D4A6C007F2C40 /* Storyboards */,
@@ -86,6 +89,14 @@
 				FBB2609D225D4BF9007F2C40 /* SettingListTableViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FBB260A1225D4CF1007F2C40 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				FBB2609F225D4CE5007F2C40 /* SettingsTableViewCell.swift */,
+			);
+			path = "Custom Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +172,7 @@
 			files = (
 				FBB2609E225D4BF9007F2C40 /* SettingListTableViewController.swift in Sources */,
 				FBB26087225D465E007F2C40 /* AppDelegate.swift in Sources */,
+				FBB260A0225D4CE5007F2C40 /* SettingsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
