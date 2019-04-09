@@ -9,24 +9,27 @@
 import UIKit
 
 class SettingListTableViewController: UITableViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    
     // MARK: - Table view data source
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        /// Set rows to three for testing
-        return 3
+        
+        return SettingController.settings.count
     }
-
+    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "settingCell", for: indexPath) as? SettingsTableViewCell else { return UITableViewCell() }
+        let setting = SettingController.settings[indexPath.row]
         
-        cell.backgroundColor = .black
-        /// Set background to black for testing
+        cell.settingNameLabel.text = setting.settingName
+        cell.settingIconImageView.image = setting.settingIcon
+        cell.settingSwitch.isOn = setting.settingIsOn
+        
         return cell
     }
 }
