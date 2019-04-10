@@ -18,18 +18,24 @@ class SettingListTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return SettingController.settings.count
+        return SettingController.sharedInstance.settings.count
     }
-    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "settingCell", for: indexPath) as? SettingsTableViewCell else { return UITableViewCell() }
-        let setting = SettingController.settings[indexPath.row]
-        
-        cell.settingNameLabel.text = setting.settingName
-        cell.settingIconImageView.image = setting.settingIcon
-        cell.settingSwitch.isOn = setting.settingIsOn
-        
+        let setting = SettingController.sharedInstance.settings[indexPath.row]
+
+        cell.cellDelegate = self
+        cell.updateViews(with: setting)
         return cell
+    }
+} // End of class
+
+extension SettingListTableViewController: SettingCellDelegate {
+    func settingSwitchTapped(for cell: SettingsTableViewCell) {
+        guard let indexPath = tableView.indexPath(for: cell) else { return }
+        let setting = SettingController.sharedInstance.settings[indexPath.row]
+        SettingController.sharedInstance.toggleIsOn(for: setting)
+        cell.updateViews(with: setting)
     }
 }

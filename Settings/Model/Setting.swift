@@ -10,9 +10,10 @@
 import UIKit
 
 class Setting {
+    // change property names to just 'name', 'icon,' etc.
     let settingName: String
     let settingIcon: UIImage
-    let settingIsOn: Bool
+    var settingIsOn: Bool
     
     init(settingName: String, settingIcon: UIImage, settingIsOn: Bool) {
         self.settingName = settingName

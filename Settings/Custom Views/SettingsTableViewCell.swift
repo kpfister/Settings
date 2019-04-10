@@ -8,22 +8,28 @@
 
 import UIKit
 
+protocol SettingCellDelegate: class {
+    func settingSwitchTapped(for cell: SettingsTableViewCell)
+}
+
 class SettingsTableViewCell: UITableViewCell {
+
+    // MARK - Properties
+    
     @IBOutlet weak var settingIconImageView: UIImageView!
     @IBOutlet weak var settingNameLabel: UILabel!
     @IBOutlet weak var settingSwitch: UISwitch!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    // Delegate
+    weak var cellDelegate: SettingCellDelegate?
+  
+    func updateViews(with setting: Setting) {
+        settingIconImageView.image = setting.settingIcon
+        settingNameLabel.text = setting.settingName
+        self.backgroundColor = settingSwitch.isOn ? .cyan : .white
     }
 
     @IBAction func settingSwitchToggled(_ sender: Any) {
+        cellDelegate?.settingSwitchTapped(for: self)
     }
 }
