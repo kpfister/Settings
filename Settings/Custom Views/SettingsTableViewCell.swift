@@ -14,8 +14,8 @@ protocol SettingCellDelegate: class {
 
 class SettingsTableViewCell: UITableViewCell {
 
-    // MARK - Properties
-    
+    // MARK - Outlets
+
     @IBOutlet weak var settingIconImageView: UIImageView!
     @IBOutlet weak var settingNameLabel: UILabel!
     @IBOutlet weak var settingSwitch: UISwitch!
@@ -24,8 +24,9 @@ class SettingsTableViewCell: UITableViewCell {
     weak var cellDelegate: SettingCellDelegate?
   
     func updateViews(with setting: Setting) {
-        settingIconImageView.image = setting.settingIcon
-        settingNameLabel.text = setting.settingName
+        settingIconImageView.image = setting.icon
+        settingNameLabel.text = setting.name
+        settingSwitch.isOn = setting.isOn
         self.backgroundColor = settingSwitch.isOn ? .cyan : .white
     }
 
